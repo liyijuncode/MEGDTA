@@ -17,7 +17,8 @@ python 3.8.12, pytorch 1.10.1, numpy 1.24.4, pandas 1.4.4, torch_geometrci 2.4.0
 `python test.py --datasets davis` Choose to train on the davis dataset and obtain the results  
 `python test.py --datasets kiba` Choose to train on the kiba dataset and obtain the results    
 `python test.py --datasets metz` Choose to train on the metz dataset and obtain the results  
-The training results will be saved in the `results/` folder, if a GPU is available, you can use command `python test.py --datasets name --gpu GPU id to use (e.g., 0, 1, 2, 3, 4)'` to select the GPU device for model training and prediction  
+The training results will be saved in the `results/` folder, if a GPU is available, you can use command `python test.py --datasets name --gpu GPU id to use (e.g., 0, 1, 2, 3, 4)'` to select the GPU device for model training and prediction
+After the run finishes, the data containing the best predictions and true values corresponding to the optimal MSE for each fold will be saved with the filename `fold_{fold}_best_predictions_{dataset}.csv`  
 # Data  
 Please check the data under the `data/` directory
 
