@@ -19,6 +19,7 @@ python 3.8.12, pytorch 1.10.1, numpy 1.24.4, pandas 1.4.4, torch_geometrci 2.4.0
 `python test.py --datasets metz` Choose to train on the metz dataset and obtain the results  
 The training results will be saved in the `results/` folder, if a GPU is available, you can use command `python test.py --datasets name --gpu GPU id to use (e.g., 0, 1, 2, 3, 4)'` to select the GPU device for model training and prediction  
 # Data  
+Please check the data under the `data/` directory
 
 
 
