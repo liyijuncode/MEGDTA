@@ -582,13 +582,9 @@ class InteractiveMultiHeadAttention(nn.Module):
         )
 
     def forward(self, chem_features, prot_features):
-        # q = self.query(chem_features)
-        # k = self.key(prot_features)
-        # v = self.value(prot_features)
-        q = self.query(prot_features)
-        k = self.key(chem_features)
-        v = self.value(chem_features)
-
+        q = self.query(chem_features)
+        k = self.key(prot_features)
+        v = self.value(prot_features)
 
         batch_size = q.size(0)
         q = q.view(batch_size, self.num_heads, -1, self.head_dim).permute(1, 0, 2, 3)
